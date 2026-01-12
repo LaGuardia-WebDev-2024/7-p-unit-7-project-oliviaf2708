@@ -10,8 +10,12 @@ void setup() {
 draw = function(){
  
   background(255,255,255,0);
-  
-
+  rect(138, 318, 50, 30); //person1
+  rect(147, 272, 34, 46);
+  ellipse(165, 254, 40, 40);
+  triangle(148, 285, 148, 293, 124, 251);
+  triangle(189, 286, 180, 292, 202, 254);
+  rect()
 
 
 
@@ -20,6 +24,8 @@ draw = function(){
   if(mousePressed){showXYPositions();}
 
 }
+
+
 
 //🟡Extra FUN Features Ms. Hall Added
 //Proceed with Caution (and Curiosity!)
