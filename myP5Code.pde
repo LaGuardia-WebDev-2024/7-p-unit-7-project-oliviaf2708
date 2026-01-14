@@ -6,6 +6,11 @@ void setup() {
 //🎯Variable Declarations Go Here
 
 var y1 = 300; 
+var y2 = 318;
+var y3 = 332;
+var y1dir = 1;
+var y2dir = .5;
+var y3dir = 2;
 
 
 //🟢Draw Procedure - Runs on Repeat
@@ -18,40 +23,65 @@ draw = function(){
   rect(138, y1 + 18, 50, 30);
   rect(147, y1 - 28, 34, 46);
   ellipse(165, y1 - 46, 40, 40);
-  triangle(148, y1 - 15, 148, 293, 124, 251);
-  triangle(189, y1 - 14, 180, 292, 202, 254);
+  triangle(148, y1 - 15, 148, y1 - 7, 124, y1 - 49);
+  triangle(189, y1 - 14, 180, y1 - 7, 202, y1 - 49);
   rect(150, y1 + 48, 10, 30);
   rect(168, y1 + 48, 10, 30);
 
   //person2
   fill(240, 180, 222)
-  ellipse(274, 338, 40, 40);
-  ellipse(274, 300, 36, 36);
-  rect(260, 252, 40, 30);
-  rect(262, 357, 10, 10);
-  rect(276, 357, 10, 10);
-  line(293, 297, 305, 309);
-  line(305, 309, 292, 325);
-  line(256, 298, 245, 305);
-  line(245, 305, 231, 283);
+  ellipse(274, y2 + 20, 40, 40);
+  ellipse(274, y2 - 18, 36, 36);
+  rect(260, y2 - 66, 40, 30);
+  rect(262, y2 + 39, 10, 10);
+  rect(276, y2 + 39, 10, 10);
+  line(293, y2 - 21, 305, y2 - 8);
+  line(305, y2 - 9, 292, y2 + 7);
+  line(256, y2 - 20, 245, y2 - 13);
+  line(245, y2 - 13, 231, y2 - 35);
 
   //person3
   fill(176, 144, 48)
-  triangle(368, 367, 390, 331, 408, 367);
-  rect(377, 366, 6, 25);
-  rect(394, 366, 6, 25);
-  ellipse(390, 315, 36, 36);
-  line(395, 343, 418, 312);
-  line(384, 343, 355, 312);
+  triangle(368, y3 + 35, 390, y3 - 1, 408, y3 + 35);
+  rect(377, y3 + 34, 6, 25);
+  rect(394, y3 + 34, 6, 25);
+  ellipse(390, y3 - 17, 36, 36);
+  line(395, y3 + 11, 418, y3 - 20);
+  line(384, y3 + 11, 355, y3 - 20);
 
+  y1 = y1 - y1dir
+  y2 = y2 - .5
+  y3 = y3 - 2
 
+  if(y1 < 174){
+  y1dir = -1;
+  }
 
+  if(y1 > 326){
+  y1dir = 1;
+  }
 
+  if(y2 < 165){
+  y2dir = -.5;
+  }
 
+  if(y2 > 326){
+  y2dir = .5;
+  }
+
+  if (y3 < 189){
+  y3dir = -2;
+  }
+
+  if (y3 > 326){
+  y3dir = 2;
+  }
+  
   //Show x y values when mousepressed
   if(mousePressed){showXYPositions();}
 
 }
+
 
 
 
