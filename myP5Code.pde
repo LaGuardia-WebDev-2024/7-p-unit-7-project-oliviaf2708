@@ -50,8 +50,8 @@ draw = function(){
   line(384, y3 + 11, 355, y3 - 20);
 
   y1 = y1 - y1dir
-  y2 = y2 - .5
-  y3 = y3 - 2
+  y2 = y2 - y2dir
+  y3 = y3 - y3dir
 
   if(y1 < 174){
   y1dir = -1;
